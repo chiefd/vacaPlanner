@@ -1,14 +1,14 @@
 # TripStack – Vacation Planner
-GOAL:
+##GOAL:
   -Simple web application to plan trips, by generating packing checklists, itinerary notes, and shareable trip details
 
-Target User
+##Target User
   -Myself (solo planner for family trips, at least for now).
 
-Core Problem
+##Core Problem
   -Trip planning is scattered across notes, texts, and memory. I want one place to organize everything and avoid forgetting gear.
 
-MVP Features
+##MVP Features
   -Create/edit trips (name, dates, location, type)
   -Trip templates (camping, beach, city, etc.)
   -Auto-generated packing checklist
@@ -16,22 +16,39 @@ MVP Features
   -Reservations/links
   -Shareable read-only link
 
-Non-Goals (v1)
+##Non-Goals (v1)
   -No accounts/login
   -No mobile app
   -No maps/integrations
   -No complex collaboration
 
-Tech Stack
+##Tech Stack
   -FastAPI (Python)
   -Postgres
   -Docker
   -GitHub Actions (CI/CD)
   -Terraform + AWS ECS (deploy)
 
-Success Criteria
+##Success Criteria
   -I can create a trip in < 2 minutes
   -Deploys automatically on push
   -Accessible from phone
   -Has logs/metrics
   -Can demo + explain architecture in interviews
+
+## API
+See API section below (or link to docs)
+
+## Checklist Generation
+Checklists are generated dynamically based on:
+- trip_type (camping, beach, city, etc.)
+- trip-specific options (JSON flags)
+
+This allows flexible packing logic without hardcoding templates.
+
+## Local Dev
+how to run docker-compose
+
+## Deployment
+CI/CD + Terraform summary
+
